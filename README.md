@@ -11,7 +11,8 @@
     Espécie
     Idade
     Peso
-  Escreva um programa em C# que permita ao usuário buscar animais por uma determinada propriedade (nome, espécie, idade ou peso) e exibir os animais que correspondem à busca.
+
+  Escreva um programa em C# que permita ao usuário registrar, editar e buscar animais por uma determinada propriedade (nome, espécie, idade ou peso) e exibir os animais que correspondem à busca.
   // Matriz de animais [Nome, Espécie, Idade, Peso]
         string[,] animais = {
             { "Fido", "Cachorro", "5", "10kg" },
