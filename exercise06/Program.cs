@@ -16,8 +16,42 @@ class Program
         {
             Console.WriteLine("\nHello! Please specify how we should search for your pet: ");
             Console.WriteLine("name - Name\nbreed - Breed\nage - Age\nweight - Weight\nexit - Exit");
+            Console.WriteLine("\n");
+
             userChoice = Console.ReadLine();
+
+            while (userChoice != "name" && userChoice != "breed" && userChoice != "age" && userChoice != "weight" && userChoice != "exit")
+            {
+                Console.WriteLine("Specify a valid operation");
+                userChoice = Console.ReadLine();
+            }
+
+            switch (userChoice)
+            {
+                case "name":
+                    {
+                        Functions.searchByName();
+                    };
+                    break;
+                case "breed":
+                    {
+                        Functions.searchByBreed();
+                    };
+                    break;
+                case "age":
+                    {
+                        Functions.searchByAge();
+                    };
+                    break;
+                case "weight":
+                    {
+                        Functions.searchByWeight();
+                    };
+                    break;
+            };
+
         }
+        Console.WriteLine("Exiting program");
     }
 }
 

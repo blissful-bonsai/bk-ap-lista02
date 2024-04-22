@@ -10,46 +10,63 @@ public class Functions
         { "Pássaro", "Canário", "2", "0.05kg" }
     };
 
-    public static void searchByName(string name)
+    public static void searchByName()
     {
-        for (int i = 0; i <= 3; i++)
+        Console.WriteLine("What's the name of the animal you are looking for?: ");
+        string name = Console.ReadLine();
+        Console.WriteLine("\n");
+        for (int i = 0; i < 3; i++)
         {
-            if (name == animals[0, i])
+            if (name == animals[i, 0])
             {
-                Console.WriteLine("We found him/her based on name!");
+                Console.WriteLine("We found him/her based on name!\n");
             }
         }
     }
 
-    public static void searchByBreed(string breed)
+    public static void searchByBreed()
     {
-        for (int i = 0; i <= 3; i++)
+        Console.WriteLine("What's the breed of the animal you are looking for?: ");
+        string breed = Console.ReadLine();
+        Console.WriteLine("\n");
+
+        for (int i = 0; i < 3; i++)
         {
-            if (breed == animals[1, i])
+            if (breed == animals[i, 1])
             {
-                Console.WriteLine("We found him/her based on breed!");
+                Console.WriteLine("We found him/her based on breed!\n");
             }
         }
     }
 
-    public static void searchByAge(string age)
+    public static void searchByAge()
     {
-        for (int i = 0; i <= 3; i++)
+        Console.WriteLine("What's the age of the animal you are looking for?: ");
+        int age = int.Parse(Console.ReadLine());
+        Console.WriteLine("\n");
+
+        for (int i = 0; i < 3; i++)
         {
-            if (age == animals[2, i])
+            if (age == int.Parse(animals[i, 2]))
             {
-                Console.WriteLine("We found him/her based on age!");
+                Console.WriteLine("We found him/her based on age!\n");
             }
         }
     }
 
-    public static void searchByWeight(string weight)
+    public static void searchByWeight()
     {
-        for (int i = 0; i <= 3; i++)
+        Console.WriteLine("What's the weight of the animal you are looking for?: ");
+        int weight = int.Parse(Console.ReadLine());
+        string weightToString = weight.ToString();
+        weightToString += "kg";
+        Console.WriteLine("\n");
+
+        for (int i = 0; i < 3; i++)
         {
-            if (weight == animals[3, i])
+            if (weightToString == animals[i, 3])
             {
-                Console.WriteLine("We found him/her based on weight!");
+                Console.WriteLine("We found him/her based on weight!\n");
             }
         }
     }
